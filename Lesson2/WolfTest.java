@@ -6,15 +6,15 @@ public class WolfTest {
     WolfTest.colour= "brown";
     WolfTest.age = 7;
     WolfTest.weight= 36;
-    System.out.println("Name =  "+WolfTest.name);
-    System.out.println("Sex =  "+WolfTest.sex);
-    System.out.println("Colour =  "+WolfTest.colour);
-    System.out.println("Age =  "+WolfTest.age);
-    System.out.println("Weight =  "+WolfTest.weight);
-    WolfTest.go ();
-    WolfTest.sit ();
-    WolfTest.run ();
-    WolfTest.bark ();
-    WolfTest.hunt ();
-}
+    System.out.println("Name =  " + WolfTest.name);
+    System.out.println("Sex =  " + WolfTest.sex);
+    System.out.println("Colour =  " + WolfTest.colour);
+    System.out.println("Age =  " + WolfTest.age);
+    System.out.println("Weight =  " + WolfTest.weight);
+    WolfTest.go();
+    WolfTest.sit();
+    WolfTest.run();
+    WolfTest.bark();
+    WolfTest.hunt();
+  }
 }
