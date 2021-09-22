@@ -17,7 +17,7 @@ public class ConditionalStatement {
         double heigth = 1.80;
         double heigthUser = 1.71;
         if (heigthUser < heigth) {
-            System.out.println("Рост меньше 1.80");
+        System.out.println("Рост меньше 1.80");
         } else {
             System.out.println("Рост больше 1.80");
         }
@@ -32,5 +32,5 @@ public class ConditionalStatement {
         } else { 
             System.out.println("What it is your name?");
         }
-        }
     }
+}

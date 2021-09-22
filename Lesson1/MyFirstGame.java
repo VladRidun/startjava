@@ -1,21 +1,22 @@
 public class MyFirstGame {   
-    public static void main(String[] args)  {
-    int  number_comp = 13;
-    int number_user = 5;
+    public static void main(String[] args) {
+    int targetNumber = 13;
+    int playerNumber = 5;
 
       System.out.println("Ugadaite chislo, kotoroe zagadal computer");
 
         do { 
-            if (number_user > number_comp){
-            System.out.println("Dannoe chislo bolshe togo chto zagadal computer              "+number_user);
-            number_user--;}
-            else  if (number_user < number_comp){
-            System.out.println("Dannoe chislo menshe togo chto zagadal computer              "+number_user);
-            number_user++;}
-        } while (number_user != number_comp);
+            if (playerNumber > targetNumber) {
+                System.out.println("Dannoe chislo bolshe togo chto zagadal computer" + playerNumber);
+                playerNumber--;
+            } else  if (playerNumber < targetNumber) {
+                System.out.println("Dannoe chislo menshe togo chto zagadal computer" + playerNumber);
+                playerNumber++;
+            }
+        } while (playerNumber != targetNumber);
         
-            if (number_user == number_comp){
-                System.out.println("Vy ugadali chislo        "+number_comp);       
+        if (playerNumber == targetNumber) {
+                System.out.println("Vy ugadali chislo " + targetNumber);       
         }
     }
 }
