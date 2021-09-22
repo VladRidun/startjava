@@ -1,6 +1,5 @@
 public class Variable {   
     public static void main(String[] args) {
-
         double screen = 15.6;
         char typeScreen1 = 'I', typeScreen2 = 'P', typeScreen3 = 'S';
         int screenResolution1 = 1920;
@@ -13,7 +12,7 @@ public class Variable {
         int ram = 8192;
         int typeRam = 4;
         long ssd = 512;
-
+        boolean status_Work = true;
         System.out.println("Диагональ экрана в дюймах: " + screen);
         System.out.println("Разрешение экрана: " + screenResolution1 + "x" + screenResolution2 );
         System.out.println("Тип матрицы: " + typeScreen1 + typeScreen2 + typeScreen3 );
@@ -24,5 +23,6 @@ public class Variable {
         System.out.println("Объем ОЗУ: " + ram + "Mb");
         System.out.println("Объем ОЗУ: DDR" + typeRam);
         System.out.println("Объем SSD: " + ssd + "GB");
+        System.out.println("Статус в сети: status_Work);
     }
 }
