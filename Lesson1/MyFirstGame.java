@@ -14,7 +14,6 @@ public class MyFirstGame {
                 playerNumber++;
             }
         } while (playerNumber != targetNumber);
-            System.out.println("Vy ugadali chislo " + targetNumber);       
+        System.out.println("Vy ugadali chislo " + targetNumber);       
     }
 }
-

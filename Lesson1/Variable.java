@@ -12,7 +12,7 @@ public class Variable {
         int ram = 8192;
         int typeRam = 4;
         long ssd = 512;
-        boolean status_Work = true;
+        boolean statusWork = true;
         System.out.println("Диагональ экрана в дюймах: " + screen);
         System.out.println("Разрешение экрана: " + screenResolution1 + "x" + screenResolution2 );
         System.out.println("Тип матрицы: " + typeScreen1 + typeScreen2 + typeScreen3 );

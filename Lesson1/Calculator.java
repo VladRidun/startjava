@@ -3,8 +3,8 @@ public class Calculator {
         // здесь меняем значение переменных a and b 
         int firstNumber = 5;
         int secondNumber = 2;
-        char operator = '%';// для выбора  меняем значение переменной
-        //переменный с операторами
+        // для выбора  меняем значение переменной
+        char operator = '%';
         int resultOperation = 0;
 
         if (operator == '+') {
@@ -23,14 +23,11 @@ public class Calculator {
             resultOperation = firstNumber % secondNumber;
             System.out.println("Delenie po moduliu " + firstNumber + "%" + secondNumber + "=" + resultOperation);
         } else if (operator == '^') {
-            int resultStepen = 1;
+            int resultDegree = 1;
             for (int i = 1; i <= secondNumber; i++) {
                 result *= firstNumber;
             }
-            System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultStepen);
+            System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultDegree);
         }
     }
 }
-
-
-
