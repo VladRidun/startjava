@@ -14,10 +14,10 @@ public class WolfTest {
         System.out.println("Age =  " + wolf.getAge());
         System.out.println("Weight =  " + wolf.getWeight());
 
-        WolfTest.go();
-        WolfTest.sit();
-        WolfTest.run();
-        WolfTest.bark();
-        WolfTest.hunt();
+        wolf.go();
+        wolf.sit();
+        wolf.run();
+        wolf.bark();
+        wolf.hunt();
     }
 }

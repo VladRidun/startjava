@@ -9,7 +9,7 @@ public class Wolf {
         this.name = name;
     }
 
-    public void getName () {
+    public String getName () {
         return name;
     }
 
@@ -17,7 +17,7 @@ public class Wolf {
         this.sex = sex;
     }
 
-    public void getSex () {
+    public String getSex () {
         return sex;
     }
 
@@ -25,14 +25,14 @@ public class Wolf {
         this.colour = colour;
     }
 
-    public void getSex () {
-        return sex;
+     public String getColour () {
+        return colour;
     }
 
     public void setAge (int age) {
         if (age > 8) {
-            System.out.println("Incorrect age!!!")
-            System.out.println("Put correct age < 8 ")
+            System.out.println("Incorrect age!!!");
+            System.out.println("Put correct age < 8 ");
         } else {
             this.age = age;
         }

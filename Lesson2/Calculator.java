@@ -1,31 +1,42 @@
 public class Calculator {
-    public static void main(String[] args) {
         private int firstNumber;
         private int secondNumber;
         private char operator;
         private int resultOperation;
 
-        if (operator == '+') {
-            resultOperation = firstNumber + secondNumber;
-            System.out.println("Summa " + firstNumber + "+" + secondNumber + "=" + resultOperation);
-        } else if (operator == '-') {
-            resultOperation = firstNumber - secondNumber;
-            System.out.println("Raznost " + firstNumber + "-" + secondNumber + "=" + resultOperation);
-        } else if (operator == '*') {
-            resultOperation = firstNumber * secondNumber;
-            System.out.println("Proizvedenie " + firstNumber + "*" + secondNumber + "=" + resultOperation);
-        } else if (operator == '/') {
-            resultOperation = firstNumber / secondNumber;
-            System.out.println("Delenie " + firstNumber + "/" + secondNumber + "=" + resultOperation);
-        } else if (operator == '%') {
-            resultOperation = firstNumber % secondNumber;
-            System.out.println("Delenie po moduliu " + firstNumber + "%" + secondNumber + "=" + resultOperation);
-        } else if (operator == '^') {
-            int resultDegree = 1;
-            for (int i = 1; i <= secondNumber; i++) {
-                result *= firstNumber;
+
+        public int Calc (int firstNumber, int secondNumber, char operator) { 
+            this.firstNumber = firstNumber;
+            this.secondNumber = secondNumber;
+            this.operator = operator;
+            switch (operator) {
+                case '+':
+                resultOperation = firstNumber + secondNumber;
+                System.out.println("Summa " + firstNumber + "+" + secondNumber + "=" + resultOperation);
+                break;
+                case '-':
+                resultOperation = firstNumber - secondNumber;
+                System.out.println("Raznost " + firstNumber + "-" + secondNumber + "=" + resultOperation);
+                break;
+                case '*':
+                resultOperation = firstNumber * secondNumber;
+                System.out.println("Proizvedenie " + firstNumber + "*" + secondNumber + "=" + resultOperation);
+                break;
+                case '/':
+                resultOperation = firstNumber / secondNumber;
+                System.out.println("Delenie " + firstNumber + "/" + secondNumber + "=" + resultOperation);
+                break;
+                case '%':
+                resultOperation = firstNumber % secondNumber;
+                System.out.println("Delenie po moduliu " + firstNumber + "%" + secondNumber + "=" + resultOperation);
+                break;
+                case '^':
+                for (int i = 1; i <= secondNumber; i++) {
+                    resultOperation *= firstNumber;
+                }
+                System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultOperation);
+                break;
             }
-            System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultDegree);
+        return resultOperation;
         }
-    }
 }
