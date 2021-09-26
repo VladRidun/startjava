@@ -36,8 +36,6 @@ public class Wolf {
         } else {
             this.age = age;
         }
-
-        this.age = age;
     }
 
     public int getAge () {
