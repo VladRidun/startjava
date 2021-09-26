@@ -5,10 +5,7 @@ public class Calculator {
         private int resultOperation;
 
 
-        public int Calc (int firstNumber, int secondNumber, char operator) { 
-            this.firstNumber = firstNumber;
-            this.secondNumber = secondNumber;
-            this.operator = operator;
+        public int calc (int firstNumber, int secondNumber, char operator) { 
             switch (operator) {
                 case '+':
                 resultOperation = firstNumber + secondNumber;
@@ -31,6 +28,7 @@ public class Calculator {
                 System.out.println("Delenie po moduliu " + firstNumber + "%" + secondNumber + "=" + resultOperation);
                 break;
                 case '^':
+                resultOperation = 1;
                 for (int i = 1; i <= secondNumber; i++) {
                     resultOperation *= firstNumber;
                 }
