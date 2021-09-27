@@ -2,26 +2,23 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator ();
-        Scanner firstNumber1 = new Scanner(System.in);
-        Scanner secondNumber2 = new Scanner(System.in);
-        Scanner operator1 = new Scanner(System.in);
-        Scanner choice1 = new Scanner(System.in);
+        Calculator calculator = new Calculator();
+        Scanner sc = new Scanner(System.in);
         char choice;
-            do {
+        do {
             System.out.println("Введите первое число");
-            int firstNumber = firstNumber1.nextInt();
+            int firstNumber = sc.nextInt();
 
             System.out.println("Введите оператор");
-            char operator = operator1.next().charAt(0);
+            char operator = sc.next().charAt(0);
 
             System.out.println("Введите второе число");
-            int secondNumber = secondNumber2.nextInt();
+            int secondNumber = sc.nextInt();
 
             System.out.println("Результат вычисления:" + calculator.calc(firstNumber, secondNumber, operator));
 
-            System.out.println("Хотите продолжить вычисления? [y/n]:");
-            choice = choice1.next().charAt(0);
+            System.out.println("Хотите продолжить вычисления? [yes/no]:");
+            choice = sc.next().charAt(0);
             if (choice != 'y') {
                 break;
             }
