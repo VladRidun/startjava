@@ -4,26 +4,30 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner sc = new Scanner(System.in);
-        char choice;
+        String choice;
         do {
             System.out.println("Введите первое число");
             int firstNumber = sc.nextInt();
 
-            System.out.println("Введите оператор");
+            System.out.println("Введите знак операции");
             char operator = sc.next().charAt(0);
 
             System.out.println("Введите второе число");
             int secondNumber = sc.nextInt();
-
             System.out.println("Результат вычисления:" + calculator.calc(firstNumber, secondNumber, operator));
-
-            System.out.println("Хотите продолжить вычисления? [yes/no]:");
-            choice = sc.next().charAt(0);
-            if (choice != 'y') {
-                break;
-            }
-        } while (choice != 'n');
+            System.out.println("Хотите продолжить вычислени [yes/no]:");
+            choice = sc.next();
+            while (!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No")) {
+                System.out.println("Хотите продолжить вычислени [yes/no]:");
+                choice = sc.next();
+                }
+            if (choice.equalsIgnoreCase("No")) {
+                break;}
+        } while (choice.equalsIgnoreCase("Yes"));
+        sc.close();
     }
 }
+
+
 
 
