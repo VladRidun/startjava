@@ -6,24 +6,22 @@ public class CalculatorTest {
         Scanner sc = new Scanner(System.in);
         String choice;
         do {
-            System.out.println("Введите первое число");
+            System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ");
             int firstNumber = sc.nextInt();
 
-            System.out.println("Введите знак операции");
+            System.out.println("РІРІРµРґРёС‚Рµ Р·РЅР°Рє РѕРїРµСЂР°С†РёРё");
             char operator = sc.next().charAt(0);
 
-            System.out.println("Введите второе число");
+            System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ");
             int secondNumber = sc.nextInt();
-            System.out.println("Результат вычисления:" + calculator.calc(firstNumber, secondNumber, operator));
-            System.out.println("Хотите продолжить вычислени [yes/no]:");
+            System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ:" + calculator.calc(firstNumber, secondNumber, operator));
+            System.out.println("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ РІС‹С‡РёСЃР»РµРЅРёСЏ [yes/no]:");
             choice = sc.next();
             while (!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No")) {
-                System.out.println("Хотите продолжить вычислени [yes/no]:");
+                System.out.println("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ РІС‹С‡РёСЃР»РµРЅРёСЏ [yes/no]:");
                 choice = sc.next();
                 }
-            if (choice.equalsIgnoreCase("No")) {
-                break;}
-        } while (choice.equalsIgnoreCase("Yes"));
+        } while (!choice.equalsIgnoreCase("No"));
         sc.close();
     }
 }
