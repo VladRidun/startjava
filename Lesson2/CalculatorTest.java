@@ -24,7 +24,3 @@ public class CalculatorTest {
         sc.close();
     }
 }
-
-
-
-
