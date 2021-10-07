@@ -1,6 +1,6 @@
 public class Calculator {
         public int calc(int firstNumber, int secondNumber, char operator) {
-        int resultOperation = 0; 
+            int resultOperation = 0; 
             switch (operator) {
                 case '+':
                     resultOperation = firstNumber + secondNumber;
@@ -30,6 +30,6 @@ public class Calculator {
                     System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultOperation);
                     break;
             }
-        return resultOperation;
+            return resultOperation;
     }
 }

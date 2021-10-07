@@ -14,13 +14,12 @@ public class CalculatorTest {
 
             System.out.println("Введите второе число");
             int secondNumber = sc.nextInt();
+
             System.out.println("Результат вычисления:" + calculator.calc(firstNumber, secondNumber, operator));
-            System.out.println("Хотите продолжить вычисления [yes/no]:");
-            choice = sc.next();
-            while (!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No")) {
+            do {
                 System.out.println("Хотите продолжить вычисления [yes/no]:");
                 choice = sc.next();
-                }
+            } while (!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No"));
         } while (!choice.equalsIgnoreCase("No"));
         sc.close();
     }
