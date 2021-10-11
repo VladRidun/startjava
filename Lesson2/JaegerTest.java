@@ -17,6 +17,10 @@ public class JaegerTest {
         System.out.println("Height =  " + jaeger1.getHeight() + "m");
         System.out.println("Strength =  " + jaeger1.getStrength());
         System.out.println("Armor =  " + jaeger1.getArmor());
+        jaeger1.move();
+        jaeger1.useVortexCannon();
+
+        System.out.println();
 
         Jaeger jaeger2 = new Jaeger();
         jaeger2.setModelName("Gipsy Danger");
@@ -34,5 +38,7 @@ public class JaegerTest {
         System.out.println("Height =  " + jaeger2.getHeight() + "m");
         System.out.println("Strength =  " + jaeger2.getStrength());
         System.out.println("Armor =  " + jaeger2.getArmor());
+        jaeger2.move();
+        System.out.println("scanKaiju operation:  " + jaeger2.scanKaiju());
     }
 }
