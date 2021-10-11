@@ -1,5 +1,5 @@
 public class Jaeger {
-    public static int jaegerCount;
+    private static int jaegerCount;
     private String modelName;
     private String mark;
     private String origin;
@@ -8,13 +8,12 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-
     public Jaeger() {
         jaegerCount++;
         System.out.println("Number of created jaeger =  " + jaegerCount);
     }
 
-    public static int getJaegerCount() {
+    public int getJaegerCount() {
         return jaegerCount;
     }
 
@@ -29,6 +28,7 @@ public class Jaeger {
     public void setMark(String mark) {
         this.mark = mark;
     }
+
     public String getMark() {
         return mark;
     }
@@ -36,6 +36,7 @@ public class Jaeger {
     public void setOrigin(String origin) {
         this.origin = origin;
     }
+
     public String getOrigin() {
         return origin;
     }
@@ -43,6 +44,7 @@ public class Jaeger {
     public void setWeight(float weight) {
         this.weight = weight;
     }
+
     public float getWeight() {
         return weight;
     }
@@ -50,6 +52,7 @@ public class Jaeger {
     public void setHeight(float height) {
         this.height = height;
     }
+
     public float getHeight() {
         return height;
     }
@@ -57,12 +60,15 @@ public class Jaeger {
     public void setStrength(int strength) {
         this.strength = strength;
     }
+
     public int getStrength() {
         return strength;
     }
+
     public void setArmor(int armor) {
         this.armor = armor;
     }
+    
     public int getArmor() {
         return armor;
     }
