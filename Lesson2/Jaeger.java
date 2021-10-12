@@ -17,60 +17,20 @@ public class Jaeger {
         return jaegerCount;
     }
 
-    public void setModelName(String modelName) {
+    public Jaeger (String modelName, String mark, String origin, float weight, float height, int strength, int armor) {
         this.modelName = modelName;
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setMark(String mark) {
         this.mark = mark;
-    }
-
-    public String getMark() {
-        return mark;
-    }
-
-    public void setOrigin(String origin) {
         this.origin = origin;
-    }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setWeight(float weight) {
         this.weight = weight;
-    }
-
-    public float getWeight() {
-        return weight;
-    }
-
-    public void setHeight(float height) {
         this.height = height;
-    }
-
-    public float getHeight() {
-        return height;
-    }
-
-    public void setStrength(int strength) {
         this.strength = strength;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setArmor(int armor) {
         this.armor = armor;
     }
-    
-    public int getArmor() {
-        return armor;
+
+    @Override
+    public String toString() {
+        return String.format("modelName: %s \nmark: %s \norigin: %s \nweight: %f \nheight: %f \nstrength: %d \narmor: %d",
+                modelName, mark, origin, weight, height, strength, armor);
     }
 
     boolean drift() {
