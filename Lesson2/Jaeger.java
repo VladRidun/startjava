@@ -7,16 +7,7 @@ public class Jaeger {
     private float height;
     private int strength;
     private int armor;
-
-    public Jaeger() {
-        jaegerCount++;
-        System.out.println("Number of created jaeger =  " + jaegerCount);
-    }
-
-    public int getJaegerCount() {
-        return jaegerCount;
-    }
-
+   
     public Jaeger (String modelName, String mark, String origin, float weight, float height, int strength, int armor) {
         this.modelName = modelName;
         this.mark = mark;
@@ -27,10 +18,13 @@ public class Jaeger {
         this.armor = armor;
     }
 
-    @Override
-    public String toString() {
-        return String.format("modelName: %s \nmark: %s \norigin: %s \nweight: %f \nheight: %f \nstrength: %d \narmor: %d",
-                modelName, mark, origin, weight, height, strength, armor);
+    public Jaeger() {
+        jaegerCount++;
+        System.out.println("Number of created jaeger =  " + jaegerCount);
+    }
+
+    public int getJaegerCount() {
+        return jaegerCount;
     }
 
     boolean drift() {
@@ -47,5 +41,11 @@ public class Jaeger {
 
     void useVortexCannon() {
         System.out.println("activated");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("modelName: %s \nmark: %s \norigin: %s \nweight: %.2f \nheight: %.2f \nstrength: %d \narmor: %d",
+                modelName, mark, origin, weight, height, strength, armor);
     }
 }
