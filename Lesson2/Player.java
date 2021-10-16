@@ -11,7 +11,8 @@ public class Player {
 
     public void guess() {
      System.out.println("Input number " + name);
-     number = sc.nextInt();
+     this.number = sc.nextInt();
+     sc.close();
     }
 
     @Override
