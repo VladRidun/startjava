@@ -16,8 +16,10 @@ public class GuessNumber {
             int guessp2;
             String namep1;
             String namep2;
+
             int targetNumber = (int) (Math.random() * 100);
             System.out.println("Copmputer guess number : " + targetNumber); //для проверки 
+
             while (true) {
             Scanner sc = new Scanner(System.in);
             System.out.println("Input number " + p1.getName());
@@ -30,8 +32,10 @@ public class GuessNumber {
             guessp2 = p1.getNumber();
             namep1 = p1.getName();
             namep2 = p2.getName();
+
             System.out.println(namep1 + " think that " + guessp1);
             System.out.println(namep2 + " think that " + guessp2);
+
                 if (guessp1 > targetNumber) {
                     System.out.println(namep1 +"  intput a number "+guessp1+" bigger than the computer guessed a number");
                 } else if (guessp1 < targetNumber) {
@@ -42,6 +46,7 @@ public class GuessNumber {
                 } else if (guessp2 < targetNumber) {
                     System.out.println(namep2 +"  intput a number "+guessp2+" smaller than computer guessed a number");
                 }
+                
                 if (guessp1 == targetNumber) {
                     System.out.println("Win player  " + namep1);
                     break;
