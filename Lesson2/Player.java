@@ -1,22 +1,26 @@
 import java.util.Scanner;
 
 public class Player {
-    String name;
-    int number;
-    Scanner sc = new Scanner(System.in);
-    
-    public Player (String name) {
-        this.name = name;
-     }
 
-    public void guess() {
-     System.out.println("Input number " + name);
-     this.number = sc.nextInt();
-     sc.close();
+    private String name;
+    private int number;
+
+    public Player(String name) {
+    this.name = name;
+         }
+
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public String toString() {
-        return String.format("name: %s", name);
+   public void setNumber (int number) {
+            this.number = number;
+        }
+
+
+    public int getNumber() {
+        return number;
+    } 
+        public Player() {
     }
 }
