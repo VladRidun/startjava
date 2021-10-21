@@ -14,7 +14,8 @@ public class GuessNumber {
 
     public void start() {
         targetNumber = (int) (Math.random() * 100);
-        System.out.println("Copmputer guess number : " + targetNumber); //для проверки 
+        //выводится число загаданное компьютером для проверки условий вывода 
+        System.out.println("Copmputer guess number : " + targetNumber); 
 
         while (true) {
         Scanner sc = new Scanner(System.in);
@@ -27,14 +28,14 @@ public class GuessNumber {
         System.out.println(p2.getName() + " think that " + p2.getNumber());
 
         if (p1.getNumber() > targetNumber) {
-            System.out.println(p1.getName() +"  intput a number "+p1.getNumber()+" bigger than the computer guessed a number");
+            System.out.println(p1.getName() + "  intput a number " + p1.getNumber() + " bigger than the computer guessed a number");
         } else if (p1.getNumber() < targetNumber) {
-            System.out.println(p1.getName() +"  intput a number "+p1.getNumber()+" smaller than computer guessed a number");
+            System.out.println(p1.getName() + "  intput a number " + p1.getNumber() + " smaller than computer guessed a number");
         }
         if (p2.getNumber() > targetNumber) {
-            System.out.println(p2.getName() +"  intput a number "+p2.getNumber()+" bigger than computer guessed a number");
+            System.out.println(p2.getName() + "  intput a number " + p2.getNumber() + " bigger than computer guessed a number");
         } else if (p2.getNumber() < targetNumber) {
-            System.out.println(p2.getName() +"  intput a number "+p2.getNumber()+" smaller than computer guessed a number");
+            System.out.println(p2.getName() + "  intput a number " + p2.getNumber() + " smaller than computer guessed a number");
         }
         if (p1.getNumber() == targetNumber) {
             System.out.println("Win player  " + p1.getName());
