@@ -1,3 +1,5 @@
+package com.startjava.Lesson2_3.robot;
+
 public class JaegerTest {
     public static void main(String[] args) {
         //System.out.println("modelName =  " + Jaeger.getJaegerCount());

@@ -1,3 +1,5 @@
+package com.startjava.Lesson1.unicode;
+
 public class Unicode {
     public static void main(String[] args) {
         int startRange = 33, endRange = 126;

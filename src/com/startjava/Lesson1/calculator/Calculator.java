@@ -1,3 +1,5 @@
+package com.startjava.Lesson1.calculator;
+
 public class Calculator {
     public static void main(String[] args) {
         // здесь меняем значение переменных a and b 
@@ -25,7 +27,7 @@ public class Calculator {
         } else if (operator == '^') {
             int resultDegree = 1;
             for (int i = 1; i <= secondNumber; i++) {
-                result *= firstNumber;
+                resultDegree *= firstNumber;
             }
             System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultDegree);
         }

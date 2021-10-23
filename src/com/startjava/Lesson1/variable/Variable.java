@@ -1,3 +1,5 @@
+package com.startjava.Lesson1.variable;
+
 public class Variable {   
     public static void main(String[] args) {
         double screen = 15.6;
@@ -23,6 +25,6 @@ public class Variable {
         System.out.println("Объем ОЗУ: " + ram + "Mb");
         System.out.println("Объем ОЗУ: DDR" + typeRam);
         System.out.println("Объем SSD: " + ssd + "GB");
-        System.out.println("Статус в сети: status_Work);
+        System.out.println("Статус в сети: status_Work");
     }
 }

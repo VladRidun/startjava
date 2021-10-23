@@ -1,3 +1,5 @@
+package com.startjava.Lesson2_3.robot;
+
 public class Jaeger {
     private static int jaegerCount;
     private String modelName;

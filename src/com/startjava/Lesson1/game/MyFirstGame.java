@@ -1,3 +1,5 @@
+package com.startjava.Lesson1.game;
+
 public class MyFirstGame {
     public static void main(String[] args) {
         int targetNumber = 13;
