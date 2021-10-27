@@ -7,9 +7,9 @@ public class Calculator {
         for (String symbol : symbols) {
             System.out.println(symbol);
         }
-          int firstNumber  = Integer.parseInt(symbols[0]);
-           int secondNumber = Integer.parseInt(symbols[2]);
-           char operator= expression.charAt(2) ;
+        int firstNumber = Integer.parseInt(symbols[0]);
+        int secondNumber = Integer.parseInt(symbols[2]);
+        char operator = expression.charAt(2);
         switch (operator) {
             case '+':
                 resultOperation = firstNumber + secondNumber;
@@ -32,7 +32,7 @@ public class Calculator {
                 System.out.println("Delenie po moduliu " + firstNumber + "%" + secondNumber + "=" + resultOperation);
                 break;
             case '^':
-                resultOperation = (int) Math.pow(firstNumber,secondNumber);
+                resultOperation = (int) Math.pow(firstNumber, secondNumber);
                 System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultOperation);
                 break;
         }
