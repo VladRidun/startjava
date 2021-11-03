@@ -5,8 +5,8 @@ public class Calculator {
         String[] symbols = expression.split(" ");
         int firstNumber = Integer.parseInt(symbols[0]);
         int secondNumber = Integer.parseInt(symbols[2]);
-        char operator = symbols[1].charAt(0);
-        switch (operator) {
+        char mathSign = symbols[1].charAt(0);
+        switch (mathSign) {
             case '+':
                 return Math.addExact(firstNumber, secondNumber);
 
