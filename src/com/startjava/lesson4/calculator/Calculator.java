@@ -2,41 +2,31 @@ package com.startjava.lesson4.calculator;
 
 public class Calculator {
     public int calc(String expression) {
-        int resultOperation = 0;
         String[] symbols = expression.split(" ");
-        for (String symbol : symbols) {
-            System.out.println(symbol);
-        }
         int firstNumber = Integer.parseInt(symbols[0]);
         int secondNumber = Integer.parseInt(symbols[2]);
-        char operator = expression.charAt(2);
+        char operator = symbols[1].charAt(0);
         switch (operator) {
             case '+':
-                resultOperation = firstNumber + secondNumber;
-                System.out.println("Summa " + firstNumber + "+" + secondNumber + "=" + resultOperation);
-                break;
+                return Math.addExact(firstNumber, secondNumber);
+
             case '-':
-                resultOperation = firstNumber - secondNumber;
-                System.out.println("Raznost " + firstNumber + "-" + secondNumber + "=" + resultOperation);
-                break;
+                return Math.subtractExact(firstNumber, secondNumber);
+
             case '*':
-                resultOperation = firstNumber * secondNumber;
-                System.out.println("Proizvedenie " + firstNumber + "*" + secondNumber + "=" + resultOperation);
-                break;
+                return Math.multiplyExact(firstNumber, secondNumber);
+
             case '/':
-                resultOperation = firstNumber / secondNumber;
-                System.out.println("Delenie " + firstNumber + "/" + secondNumber + "=" + resultOperation);
-                break;
+                return (int) Math.ceil(firstNumber / secondNumber);
+
             case '%':
-                resultOperation = Math.floorDiv(firstNumber, secondNumber);
-                System.out.println("Delenie po moduliu " + firstNumber + "%" + secondNumber + "=" + resultOperation);
-                break;
+                return (int) Math.IEEEremainder(firstNumber, secondNumber);
+
             case '^':
-                resultOperation = (int) Math.pow(firstNumber, secondNumber);
-                System.out.println(firstNumber + " v stepeni " + secondNumber + " = " + resultOperation);
-                break;
+                return (int) Math.pow(firstNumber, secondNumber);
+            default:
+                System.out.println("Выражение неправильно введено!!!");
+                return 0;
         }
-        expression = null;
-        return resultOperation;
     }
 }
