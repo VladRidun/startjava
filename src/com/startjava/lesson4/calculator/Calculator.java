@@ -9,19 +9,14 @@ public class Calculator {
         switch (mathSign) {
             case '+':
                 return Math.addExact(firstNumber, secondNumber);
-
             case '-':
                 return Math.subtractExact(firstNumber, secondNumber);
-
             case '*':
                 return Math.multiplyExact(firstNumber, secondNumber);
-
             case '/':
                 return (int) Math.ceil(firstNumber / secondNumber);
-
             case '%':
                 return (int) Math.IEEEremainder(firstNumber, secondNumber);
-
             case '^':
                 return (int) Math.pow(firstNumber, secondNumber);
             default:

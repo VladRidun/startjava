@@ -18,7 +18,8 @@ public class Player {
 
     public void setNumber(int number) {
         this.number = number; //Заполняем массив элементами, введёнными с клавиатуры
-        }
+    }
+
     public int getNumber() {
         return number;
     }
