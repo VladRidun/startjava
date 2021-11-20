@@ -16,7 +16,7 @@ public class GuessNumberTest {
             game.start();
             do {
                 System.out.println("Do you want to continue [yes/no]:");
-                choice = sc.next();
+                choice = sc.nextLine();
             } while (!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No"));
         } while (!choice.equalsIgnoreCase("No"));
         sc.close();

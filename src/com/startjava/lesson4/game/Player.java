@@ -2,34 +2,39 @@ package com.startjava.lesson4.game;
 
 import java.util.Arrays;
 
-import static java.util.Arrays.copyOf;
-
 public class Player {
     private String name;
     private int[] numberArray = new int[10];
+    private int count=0;
 
     public Player(String name) {
         this.name = name;
     }
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
-    public void setNumberArray(int number, int i) {
-        this.numberArray[i] = number; //Заполняем массив элементами, введёнными с клавиатуры
+    public void setNumberArray(int number) {
+        this.numberArray[count] = number;
+        count++;//Заполняем массив элементами, введёнными с клавиатуры
     }
 
-    public int getNumber(int i) {
-        return numberArray[i];
+    public  int getNumber(int count) {
+        return numberArray[count];
     }
 
-    public String getNumberArray(int i) {
-        return Arrays.toString(Arrays.copyOf(numberArray, i));
+    public int getCount(){
+        return count;
     }
 
-    public void fillArray(int i) {
-        Arrays.fill(numberArray, 0, i, 0);
+    public String getNumberArray(int count) {
+        return Arrays.toString(Arrays.copyOf(numberArray,count));
+
+    }
+
+    public void clearArray() {
+        Arrays.fill(numberArray, -1);
+        count=0;
     }
 }
-
