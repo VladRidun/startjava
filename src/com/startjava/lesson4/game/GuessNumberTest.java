@@ -11,14 +11,14 @@ public class GuessNumberTest {
         Player player2 = new Player(sc.nextLine());
 
         GuessNumber game = new GuessNumber(player1, player2);
-        String choice;
+        String choice = "yes";
         do {
-            game.start();
-            do {
+            if (choice.equalsIgnoreCase("yes")) {
+                game.start();
                 System.out.println("Do you want to continue [yes/no]:");
                 choice = sc.nextLine();
-            } while (!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No"));
-        } while (!choice.equalsIgnoreCase("No"));
+            }
+        } while (!choice.equalsIgnoreCase("no"));
         sc.close();
     }
 }

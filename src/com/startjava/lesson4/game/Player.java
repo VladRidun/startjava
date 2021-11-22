@@ -4,37 +4,36 @@ import java.util.Arrays;
 
 public class Player {
     private String name;
-    private int[] numberArray = new int[10];
-    private int count=0;
+    private int[] numbers = new int[10];
+    private int count = 0;
 
     public Player(String name) {
         this.name = name;
     }
 
-    public  String getName() {
+    public String getName() {
         return name;
     }
 
-    public void setNumberArray(int number) {
-        this.numberArray[count] = number;
+    public void setNumbers(int number) {
+        numbers[count] = number;
         count++;//Заполняем массив элементами, введёнными с клавиатуры
     }
 
-    public  int getNumber(int count) {
-        return numberArray[count];
+    public int getLastNumber(int count) {
+        return numbers[count];
     }
 
-    public int getCount(){
+    public int getCount() {
         return count;
     }
 
-    public String getNumberArray(int count) {
-        return Arrays.toString(Arrays.copyOf(numberArray,count));
-
+    public int[] getNumbers(int count) {
+        return Arrays.copyOf(numbers, count);
     }
 
-    public void clearArray() {
-        Arrays.fill(numberArray, -1);
-        count=0;
+    public void clearArray(int i) {
+        Arrays.fill(numbers, 0, i, 0);
+        count = 0;
     }
 }
