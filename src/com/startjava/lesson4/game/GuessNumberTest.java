@@ -15,10 +15,9 @@ public class GuessNumberTest {
         do {
             if (choice.equalsIgnoreCase("yes")) {
                 game.start();
-                System.out.println("Do you want to continue [yes/no]:");
-                choice = sc.nextLine();
             }
+            System.out.println("Do you want to continue [yes/no]:");
+            choice = sc.nextLine();
         } while (!choice.equalsIgnoreCase("no"));
-        sc.close();
     }
 }
