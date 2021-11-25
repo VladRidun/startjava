@@ -18,26 +18,23 @@ public class GuessNumber {
         // выводится число загаданное компьютером для проверки условий вывода
         System.out.println("Copmputer guess number : " + targetNumber);
         System.out.println("You  have 10 attempts!");
-        int i;
-        for (i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             if (makeMove(player1) || makeMove(player2)) {
                 break;
             }
         }
         printNumbers(player1);
         printNumbers(player2);
-        player1.clearArray(i);
-        player2.clearArray(i);
+        player1.clearArray();
+        player2.clearArray();
     }
 
     private boolean makeMove(Player player) {
         inputNumber(player);
         int attemptCount = player.getCount();
-        if (player.getLastNumber() > targetNumber) {
-            System.out.println(player.getName() + "  intput a number " + player.getLastNumber() + " bigger than the computer guessed a number");
-        } else if (player.getLastNumber() < targetNumber) {
-            System.out.println(player.getName() + "  intput a number " + player.getLastNumber() + " smaller than computer guessed a number");
-        } else {
+        String bigSmall = player.getLastNumber() > targetNumber ? "bigger" : "smaller";
+        System.out.println(player.getName() + "  intput a number " + player.getLastNumber() + " " + bigSmall + " than the computer guessed a number");
+        if (player.getLastNumber() == targetNumber) {
             System.out.println("Player  " + player.getName() + " guess number " + targetNumber + " with " + attemptCount + " attempts");
             return true;
         }
@@ -54,10 +51,9 @@ public class GuessNumber {
 
     private void printNumbers(Player player) {
         System.out.println("Player  " + player.getName() + " input numbers:");
-        int[] array = player.getNumbers();
-        for (int i : array) {
-            System.out.print(i);
-            System.out.print(" ");
+        int[] numbers = player.getNumbers();
+        for (int number : numbers) {
+            System.out.print(number + " ");
         }
         System.out.println();
     }

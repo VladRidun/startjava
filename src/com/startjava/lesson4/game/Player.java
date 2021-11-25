@@ -33,8 +33,8 @@ public class Player {
         return Arrays.copyOf(numbers, count);
     }
 
-    public void clearArray(int i) {
-        Arrays.fill(numbers, 0, i, 0);
+    public void clearArray() {
+        Arrays.fill(numbers, 0, count, 0);
         count = 0;
     }
 }
